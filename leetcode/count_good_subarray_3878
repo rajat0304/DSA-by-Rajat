@@ -1,0 +1,56 @@
+class Solution {
+public:
+    long long countGoodSubarrays(vector<int>& nums) {
+        int n = nums.size();
+        long long ans = 0;
+        vector<vector<int>> count(31, vector<int>(n, 0));
+
+        for(int i = 0 ; i<31 ; i++){
+            int bit = 1<<i;
+            for(int j = 0 ; j<n ; j++){
+                if((nums[j] & bit) != 0) count[i][j]++;
+            }
+        }
+
+        for(int i = 0 ; i<31 ; i++){
+            for(int j = 1 ; j<n ; j++){
+                count[i][j] += count[i][j-1];
+            }
+        }
+
+        map<int,int> mp;
+
+        for(int i = 0 ; i<n ; i++){
+            int left = 0;
+            int right = n-1;
+
+            if(mp.find(nums[i]) != mp.end()){
+                left = max(left, mp[nums[i]] + 1);
+            }
+
+            for(int j = 0; j<31 ; j++){
+                
+                int bit = 1<<j;
+                if((nums[i] & bit) == 0){
+                    int idx1 = lower_bound(count[j].begin() , count[j].begin() + i, count[j][i]) - count[j].begin();
+                    if(idx1 < i){
+                        idx1++;
+                    }
+
+                    if(count[j][i] == 0) idx1 = 0;
+
+                    left = max(left, idx1);
+
+                    int idx2 = lower_bound(count[j].begin() + i, count[j].end(), count[j][i]+1) - count[j].begin();
+                    idx2--;
+right = min(right, idx2);
+                }
+            }
+
+            ans += (1LL * (i - left + 1) * (right - i + 1));
+            mp[nums[i]] = i;
+        }
+
+        return ans;
+    }
+};
