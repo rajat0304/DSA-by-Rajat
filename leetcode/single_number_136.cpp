@@ -1,3 +1,4 @@
+//brute force approch
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
