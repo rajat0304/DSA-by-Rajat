@@ -21,12 +21,11 @@ int binsearch(const vector<int>&arr,int target){
     return -1;
 }
 int main(){
-    // taking the example of the array(unsorted)
     vector<int>score={13,14,15,1,2,3,4,5,6,7,8,9,10,11,12};
     int target=14;
     // using STL method to sort the array
     sort(score.begin(),score.end());
-    cout<<"sorted array ";// printing the score array after sorting it 
+    cout<<"sorted array ";
     for(int i :score){
         cout<<i<<" ";
         }
