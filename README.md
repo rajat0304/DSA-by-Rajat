@@ -10,8 +10,8 @@ Consistency is the ultimate key to mastering problem-solving, and this repositor
 ## 📂 Repository Structure
 
 The repository is organized by **Topic** to make it easy to navigate and review specific concepts. Each folder contains the problem statement, my C++ solution, and a brief explanation of the time and space complexity.
-
-* 📁 **Arrays**
-* 📁 **Strings**
-* 📁 **Sorting & Searching**
-* 📁 **LEETCODE**
+📁 **SEARCHING AND SHORTHING METHODS**
+📁 **LEETCODE**
+:-* 📁 **Arrays**
+:-* 📁 **Strings**
+:-* 📁 **Sorting & Searching**
