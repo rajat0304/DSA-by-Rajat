@@ -15,3 +15,7 @@ The repository is organized by **Topic** to make it easy to navigate and review 
 :-* 📁 **Arrays**
 :-* 📁 **Strings**
 :-* 📁 **Sorting & Searching**
+📁 **LEETCODE_py**
+:-* 📁 **Arrays**
+:-* 📁 **Strings**
+:-* 📁 **Sorting & Searching**
