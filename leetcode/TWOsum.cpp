@@ -1,3 +1,4 @@
+//brute force approch
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
@@ -12,3 +13,5 @@ public:
         return{};
     }
 };
+// better optimised solution
+
