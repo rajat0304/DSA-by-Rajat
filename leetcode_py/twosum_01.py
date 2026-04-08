@@ -1,8 +1,15 @@
-def twosum(nums,target):
-    num_map ={}
-    for i in range(len(nums)):
-        complement = target-nums[i]
-        if complement in num_map:
-            return [num_map[complement],i]
-            num_map[nums[i]]=i
-            print(twosum([2,7,11,15],9))
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        n = len(nums)
+        for i in range(0,n-1):
+            for j in range(i+1,n):
+                if(nums[i] + nums[j] == target):
+                    return[i,j]
+        return{}                  
+
+        
