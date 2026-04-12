@@ -7,6 +7,7 @@ public:
             if(buyprice > prices[i]){
                 buyprice = prices[i];
             }
+            // for finding the minimum prices
             profit = max(profit,prices[i]-buyprice);
         }
         return profit ;
