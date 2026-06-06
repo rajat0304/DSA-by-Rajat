@@ -52,7 +52,6 @@ void print(Node*head){
     }
     cout<<"null"<<endl;
 }
-//main function 
 int main(){
 
     int arr[] = {10,20,30,40,50};
