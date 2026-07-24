@@ -6,6 +6,9 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+//Pattern: Fast & Slow Pointers (Floyd's Cycle Detection)
+//Intuition:The fast pointer travels exactly twice the distance of the slow pointer. The extra distance covered by the fast pointer must therefore be a whole number of cycle lengths. This creates the relationship that the distance from the head to the cycle entry equals the remaining distance from the meeting point to the cycle entry, modulo full cycles. That's why resetting one pointer to the head and moving both one step at a time makes them meet at the cycle start.
+//Time: O(N) | Space: O(1)
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
