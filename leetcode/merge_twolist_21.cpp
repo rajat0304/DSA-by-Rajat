@@ -8,6 +8,16 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+// Pattern: Two Pointers + Dummy Node
+// Intuition:
+// Compare the current nodes of both sorted lists.
+// Attach the smaller node to the answer and move that pointer.
+// Continue until one list ends, then attach the remaining nodes.
+//
+// Time: O(n + m) | Space: O(1)
+// Key insight:
+// Since both lists are already sorted, a single linear pass is enough.
+// A dummy node avoids handling the head as a special case.
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
