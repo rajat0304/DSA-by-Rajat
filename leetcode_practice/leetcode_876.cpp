@@ -8,6 +8,16 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+// Pattern: Fast & Slow Pointers
+// Intuition:
+// Move slow one step and fast two steps.
+// When fast reaches the end, slow will be at the middle.
+//
+// Time: O(n) | Space: O(1)
+// Key insight:
+// Fast travels twice as quickly as slow, so when fast completes the list,
+// slow has covered exactly half the distance.
+// For even-length lists, this naturally returns the second middle.
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
