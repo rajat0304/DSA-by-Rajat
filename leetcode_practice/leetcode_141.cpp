@@ -6,6 +6,16 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+// Pattern: Floyd's Cycle Detection (Tortoise & Hare)
+// Intuition:
+// Move slow by one step and fast by two steps.
+// If they ever meet, a cycle exists.
+// If fast reaches nullptr, there is no cycle.
+//
+// Time: O(n) | Space: O(1)
+// Key insight:
+// In a cycle, the faster pointer eventually catches the slower pointer,
+// just like two runners on a circular track.
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
