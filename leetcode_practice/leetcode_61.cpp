@@ -8,6 +8,7 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+// solved using for loop and basic math
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
