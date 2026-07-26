@@ -8,7 +8,16 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-// solved using for loop and basic math
+// Pattern: Fast & Slow Pointers + Circular Linked List
+// Intuition:
+// Find the length of the list.
+// Connect the tail to the head to form a circle.
+// Move to the new tail (length - k % length - 1 steps) and break the circle.
+//
+// Time: O(n) | Space: O(1)
+// Key insight:
+// Rotating right by k is equivalent to rotating by k % length.
+// Making the list circular eliminates complicated pointer shifting.
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
